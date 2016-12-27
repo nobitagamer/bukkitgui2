@@ -1,0 +1,15 @@
+version: 1.0.{build}
+configuration: Release
+platform: Any CPU
+build:
+  verbosity: minimal
+artifacts:
+- path: bukkitgui2\bin\Release
+  name: bukkitgui2
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: hCsdnJKzrVWpzZ8zVendRyInhVyO/qwlUtZSv6c7Ma3GjAjGetQQTAZvdUY2DHnk
+  artifact: bukkitgui2
+  draft: true
+  force_update: true
